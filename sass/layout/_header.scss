@@ -6,6 +6,15 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 6rem;
+    }
+
     &__text-box {
         position: absolute;
         top:25%;
@@ -16,8 +25,21 @@
 
     &__button-box {
         position: absolute;
-        top:40%;
+        top:45%;
         left: 50%;
         transform: translate(-50%, -50%);        
+
+        & a:not(:last-child) {
+            margin-right: 10rem;
+        }
+        & a:last-child {
+            margin-left: 10rem;
+        }        
+    }
+
+
+    &__features {
+        padding-top: 70rem;
+
     }
 }
