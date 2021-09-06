@@ -23,10 +23,23 @@
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
+        
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
+
+
+    }
+
+    &:hover &--phone-span {
+        opacity: 0;
+
+    }
+
+    &:hover:before {
+            opacity: 1;
+            transform: translate(0,0);
     }
     
     &:active,
@@ -34,6 +47,17 @@
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }    
+
+    &::before {
+        content: attr(data-hover);
+        opacity: 0;
+        transform: translate(-150%,0);
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: 100%;
+        text-align: center;        
+    }
 
     &::after {
         content: "";
@@ -67,7 +91,10 @@
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
-    }    
+    }
+
+
+
 }
 
 .btn-text {

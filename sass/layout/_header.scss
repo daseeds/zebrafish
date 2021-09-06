@@ -1,10 +1,21 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/desktop-1.jpg) ;
-    background-position: top;
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    
     position: relative;
+
+    &::before {
+        content: "";
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-size: cover;
+        background-position: top;
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/desktop-1.jpg) ;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
 
     &__logo-box {
         position: absolute;
@@ -37,8 +48,11 @@
         }        
     }
 
-
     &__features {
+        // position: absolute;
+        // top:65%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);        
         padding-top: 70rem;
 
     }
