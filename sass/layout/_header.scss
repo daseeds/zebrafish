@@ -1,12 +1,12 @@
 .header {
-    height: 95vh;
+    height: 50vh;
     
     position: relative;
 
     &::before {
         content: "";
         position:absolute;
-        z-index:-1;
+        z-index:0;
         top:0;
         left:0;
         right:0;
@@ -14,7 +14,7 @@
         background-size: cover;
         background-position: top;
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/desktop-1.jpg) ;
-        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
     }
 
     &__logo-box {
@@ -26,9 +26,10 @@
         height: 6rem;
     }
 
+
     &__text-box {
         position: absolute;
-        top:25%;
+        top:30%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -36,7 +37,7 @@
 
     &__button-box {
         position: absolute;
-        top:45%;
+        top:60%;
         left: 50%;
         transform: translate(-50%, -50%);        
 
@@ -54,6 +55,7 @@
         // left: 50%;
         // transform: translate(-50%, -50%);        
         padding-top: 70rem;
+        z-index: 100;
 
     }
 }

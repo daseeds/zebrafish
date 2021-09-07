@@ -1,6 +1,12 @@
 .section-features {
     background-color: $color-grey-light-1;
     padding: 20rem 0;
+    margin-top: -20vh;    
+}
+
+.section-tarifs {
+    background-color: $color-grey-light-1;
+    padding: 20rem 0;
     margin-top: -15vh;
-    
+    z-index: -100;
 }

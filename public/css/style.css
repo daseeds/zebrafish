@@ -62,6 +62,26 @@ body {
         letter-spacing: 1rem;
         font-size: 5rem; } }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 2px;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+
+.background-clip {
+  display: inline-block;
+  background-image: linear-gradient(to right, #58BDEC, #1A2BC6);
+  -webkit-background-clip: text;
+  color: transparent; }
+
 .u-center-text {
   text-align: center  !important; }
 
@@ -285,12 +305,12 @@ body {
     width: calc((100% - 2 * 6rem) / 3 * 2 + 6rem); }
 
 .header {
-  height: 95vh;
+  height: 50vh;
   position: relative; }
   .header::before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 0;
     left: 0;
     right: 0;
@@ -298,7 +318,7 @@ body {
     background-size: cover;
     background-position: top;
     background-image: linear-gradient(to right bottom, rgba(88, 189, 236, 0.8), rgba(26, 43, 198, 0.8)), url(../img/desktop-1.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -307,13 +327,13 @@ body {
     height: 6rem; }
   .header__text-box {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
   .header__button-box {
     position: absolute;
-    top: 45%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); }
     .header__button-box a:not(:last-child) {
@@ -321,9 +341,16 @@ body {
     .header__button-box a:last-child {
       margin-left: 10rem; }
   .header__features {
-    padding-top: 70rem; }
+    padding-top: 70rem;
+    z-index: 100; }
 
 .section-features {
   background-color: #f7f7f7;
   padding: 20rem 0;
-  margin-top: -15vh; }
+  margin-top: -20vh; }
+
+.section-tarifs {
+  background-color: #f7f7f7;
+  padding: 20rem 0;
+  margin-top: -15vh;
+  z-index: -100; }
