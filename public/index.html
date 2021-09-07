@@ -96,20 +96,32 @@
             <div class="row">
                 <div class="contact">
                     <div class="contact__form">
-                        <form action="#" class="form">
+                        <form action="mailto:cyril@assistinfo.net" class="form" enctype="application/x-www-form-urlencoded">
                             <div class="u-maring-bottom-medium">
                                 <h2 class="heading-secondary background-clip">
                                     Contactez moi
                                 </h2>    
                             </div>
                             <div class="form__group">	
-                                <input type="nom" class="form_input" placeholder="Votre Nom" required>
-                                <label for="nom" class="form__label">Votre Nom</label>
+                                <input type="text" class="form__input" placeholder="Nom" required name="nom" id="nom">
+                                <label for="nom" class="form__label">Nom</label>
                             </div>
                             <div class="form__group">	
-                                <input type="nom" class="form_input" placeholder="Votre Email" required>
-                                <label for="nom" class="form__label">Votre Email</label>
+                                <input type="email" class="form__input" placeholder="Email" required name="email" id="email">
+                                <label for="email" class="form__label">Email</label>
                             </div>
+                            <div class="form__group">	
+                                <textarea class="form__input" name="comments" required id="content" rows="5"></textarea>
+                                <label for="content" class="form__label">Message</label>
+                            </div>
+                            <div class="form__group">
+                                <button class="btn btn--green" type="submit">Envoyer &rarr;</button>
+                                <input class="btn btn--green" type="submit" value="Envoyer &rarr;" />
+                                <button class="g-recaptcha" 
+        data-sitekey="6Ldnc08cAAAAACvPW4WqLZP_af-djBgaaR8DYgBB" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+                            </div>    
                         </form>
                     </div>
                 </div>
@@ -191,5 +203,10 @@
     </section>
 -->
 
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+      document.getElementById("demo-form").submit();
+    }
+  </script>
 </html>
