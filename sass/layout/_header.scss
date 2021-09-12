@@ -14,7 +14,7 @@
         background-size: cover;
         background-position: top;
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/desktop-1.jpg) ;
-        clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
 
         @include respond(phone) {
             -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -73,7 +73,7 @@
 
     &__text-box {
         position: absolute;
-        top:30%;
+        top:20rem;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -84,7 +84,7 @@
 
     &__button-box {
         position: absolute;
-        top:60%;
+        top:35rem;
         left: 50%;
         transform: translate(-50%, -50%);
 
@@ -94,7 +94,7 @@
         }             
 
         & a:not(:last-child) {
-            margin-right: 10rem;
+            margin-right: 8rem;
             @include respond(tab-land) { 
                 margin-right: 3rem;
                 
@@ -105,7 +105,7 @@
             }            
         }
         & a:last-child {
-            margin-left: 10rem;
+            margin-left: 8rem;
             @include respond(tab-land) { 
                 margin-left: 3rem;
             }            

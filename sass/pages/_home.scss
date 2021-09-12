@@ -2,13 +2,16 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;    
+   
 }
 
 .section-tarifs {
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -10vh;
-
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }   
 }
 
 .section-contact {
@@ -20,6 +23,7 @@
 }
 
 .section-area {
+
     padding: 20rem 0;;
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, 0.8)), url(../img/cristofer-maximilian-PP1yKpfA4HY-unsplash.jpg);
     background-size: cover;
@@ -28,6 +32,9 @@
     & > * {
         transform: skewY(7deg);
     }    
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }       
 }
 
 .contact {
