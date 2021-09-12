@@ -29,6 +29,8 @@ body {
 
     }
 
+
+
 }
 
 .heading-secondary {
@@ -46,6 +48,9 @@ body {
         font-size: 2.5rem;
     }    
 
+    &__white {
+        color: $color-white;
+    }
 }
 
 .background-clip {
