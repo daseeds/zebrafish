@@ -15,6 +15,12 @@
         background-position: top;
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/desktop-1.jpg) ;
         clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
+
+        @include respond(phone) {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);        
+        }
+
     }
 
     &__logo-box {
@@ -30,12 +36,18 @@
         position: absolute;
         top: 2rem;
         right: 40rem;
+        @include respond(phone) { 
+            right: 7rem;   
+        }          
     }
 
-    &__email {
+    &__email {        
         position: absolute;
         top: 2rem;
         right: 7rem;        
+        @include respond(phone) { 
+            display: none;
+        }          
     }
 
     &__text-link {
@@ -65,19 +77,43 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        @include respond(phone) { 
+            top:35%;
+        }          
     }
 
     &__button-box {
         position: absolute;
         top:60%;
         left: 50%;
-        transform: translate(-50%, -50%);        
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        @include respond(phone) { 
+            top:65%;
+        }             
 
         & a:not(:last-child) {
             margin-right: 10rem;
+            @include respond(tab-land) { 
+                margin-right: 3rem;
+                
+            }
+            @include respond(tab-port) { 
+                margin-right: 0rem;
+                margin-bottom: 1rem;
+            }            
         }
         & a:last-child {
             margin-left: 10rem;
+            @include respond(tab-land) { 
+                margin-left: 3rem;
+            }            
+            @include respond(tab-port) { 
+                margin-left: 0rem;
+                margin-bottom: 1rem;
+
+            } 
         }        
     }
 

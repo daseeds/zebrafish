@@ -21,10 +21,13 @@ body {
         animation-duration: 1s;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 
-        
-        @include respond(phone) {
+        @include respond(tab-port) {
             letter-spacing: 1rem;
             font-size: 5rem;
+        }              
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 4rem;
         }        
 
     }
